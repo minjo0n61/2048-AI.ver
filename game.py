@@ -1,4 +1,5 @@
-import os, pygame
+import os
+import pygame
 import _2048
 from _2048.game import Game2048
 from _2048.manager import GameManager
@@ -8,7 +9,7 @@ def run_game(game_class=Game2048, title='2048-Python!', data_dir='save'):
     pygame.init()
     pygame.display.set_caption(title)
     pygame.display.set_icon(game_class.icon(32))
-    # clock = pygame.time.Clock()
+    # clock = pygame.time.perf_counter()
     
     os.makedirs(data_dir , exist_ok=True)
 
